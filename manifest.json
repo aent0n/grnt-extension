@@ -1,20 +1,21 @@
 {
-    "manifest_version": 3,
-    "name": "Grünt Radio Discord RPC",
-    "version": "1.0",
-    "description": "Displays the currently playing song from the web Grünt Radio player on Discord.",
-    "permissions": [
-      "activeTab",
-      "storage"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://www.gruntmag.com/radio-player*"],
-        "js": ["content.js"]
-      }
-    ]
-  }
-  
+  "manifest_version": 3,
+  "name": "Gruntmag Discord RPC",
+  "version": "1.0",
+  "description": "Displays the currently playing song from Gruntmag on Discord.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module",
+    "import_scripts": ["discord-rpc.bundled.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.gruntmag.com/radio-player*"],
+      "js": ["content.js"]
+    }
+  ]
+}

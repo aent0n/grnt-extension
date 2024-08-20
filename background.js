@@ -1,6 +1,4 @@
-// You'll need to install the discord-rpc package 
-// (npm install discord-rpc) and replace 'YOUR_CLIENT_ID' 
-// with your actual Discord application client ID
+
 
 const clientId = '1275422825917841512'; 
 
