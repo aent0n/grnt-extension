@@ -1,5 +1,4 @@
-
-
+console.log(DiscordRPC);
 const clientId = '1275422825917841512'; 
 
 let rpc = null;
